@@ -18,13 +18,12 @@ class TCPClient {
 
 
             try {
-
-
                 Scanner intFromUser = new Scanner(System.in);
+
                 Socket clientSocket = new Socket("localhost", 8080);
+
                 DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
                 DataInputStream inFromServer = new DataInputStream(clientSocket.getInputStream());
-
 
                 System.out.println("Enter number of messages you want to send: ");
                 maxMess = intFromUser.nextInt();

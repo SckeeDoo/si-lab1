@@ -8,9 +8,12 @@ class TCPServer {
     public static void main(String argv[]) throws Exception {
         final String[] clientSentence = new String[1];
         final String[] capitalizedSentence = new String[1];
-        ServerSocket welcomeSocket = new ServerSocket(8080);
+
+
+        ServerSocket welcomeSocket = new ServerSocket(8070);
 
         while (true) {
+
             Socket connectionSocket = welcomeSocket.accept();
             System.out.println("New client connected ...");
 
@@ -25,8 +28,6 @@ class TCPServer {
                         capitalizedSentence[0] = clientSentence[0].toUpperCase();
                         outToClient.writeUTF(capitalizedSentence[0]);
                     }
-
-
 
                 } catch (IOException e) {
 
