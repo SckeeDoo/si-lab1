@@ -23,12 +23,12 @@ class TCPClient {
 
 
                 while (counter < 5) {
-                    sentence = inFromUser.readLine();
-                    outToServer.writeUTF(sentence + '\n');
+                    outToServer.writeUTF("Message " + (counter+1));
                     outToServer.flush();
                     modifiedSentence = inFromServer.readUTF();
-                    System.out.println("FROM SERVER: " + modifiedSentence);
+                    System.out.println("FROM SERVER: " + "Message" + (counter+1));
                     counter++;
+                    Thread.sleep(5000);
                 }
 
             } catch (IOException e) {

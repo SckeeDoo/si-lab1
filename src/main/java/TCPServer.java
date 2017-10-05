@@ -26,6 +26,8 @@ class TCPServer {
                         outToClient.writeUTF(capitalizedSentence[0]);
                     }
 
+
+
                 } catch (IOException e) {
 
                 }
