@@ -8,7 +8,7 @@ Language: **Java 1.8**
 
 **TCPClien.java**
 
-'''java
+```java
 class TCPServer {
     public static void main(String argv[]) throws Exception {
         final String[] clientSentence = new String[1];
@@ -35,4 +35,4 @@ class TCPServer {
         }
     }
 }
-'''
+```
